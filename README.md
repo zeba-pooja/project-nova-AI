@@ -2,7 +2,7 @@
 ----------------------------------------------
 🎓 Student: Zeba Nargis T. M.  
 📂 Project: Personal AI Assistant using Flask + Gemini AI  
-📅 Submission Date: [Insert Date Here]
+📅 Submission Date: [30-6-2025]
 
 ----------------------------------------------
 📄 PROJECT OVERVIEW
