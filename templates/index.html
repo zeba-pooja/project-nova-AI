@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nova - AI Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="box">
+    <h1>🤖 Nova - Personal AI Assistant</h1>
+    <input type="text" id="userInput" placeholder="Ask Nova..." />
+    <button onclick="askNova()">Ask</button>
+    <div id="responseArea"><strong>Nova:</strong> <span id="response">Hello! How can I help?</span></div>
+  </div>
+
+  <script>
+    async function askNova() {
+      const userMessage = document.getElementById("userInput").value;
+      const response = await fetch("/ask", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ message: userMessage })
+      });
+      const data = await response.json();
+      document.getElementById("response").innerText = data.reply;
+    }
+  </script>
+</body>
+</html>
